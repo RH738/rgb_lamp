@@ -1,0 +1,17 @@
+.caption {
+    padding-bottom:  4rem;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 5rem
+}
+
+body {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    /*font-family: 'Luckiest Guy', cursive;
+    font-family: 'Audiowide', cursive;*/
+    font-family: 'Basic', sans-serif;
+}
+
+.container {
+    /*width: 70%*/
+}

@@ -1,0 +1,15 @@
+{
+  "name": "rgb_lamp",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "rob"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Rob738/rgb_lamp",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.0",
+    "bootstrap-timepicker": "^0.5.2"
+  }
+}

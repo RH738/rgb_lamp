@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>rgb light app</title>
+    <script type="text/javascript" src="jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="clockpicker/js/bootstrap-clockpicker.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="clockpicker/css/bootstrap-clockpicker.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="bootstrap/dist/css/bootstrap-theme.css"> -->
+
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Basic|Luckiest+Guy" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container caption">
+        <h1>add a schedule for your lamp</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <form action="/" method="post">
+                    <div class="form-group">
+                        <label for="color_pick">pick your color</label>
+                        <input class="form-control" type="color" value="#FF0000" name="color">
+                            <label for="date_range">pick date range</label>
+                            <div class="input-daterange input-group">
+                                <span class="input-group-addon">from</span>
+                                <input id="daterange"  type="text" class="input-sm form-control daterange" name="startDate" />
+                                <span class="input-group-addon">to</span>
+                                <input id="daterange" type="text" class="input-sm form-control daterange" name="endDate" />
+                            </div>
+                        <label for="start_time">turn on time</label>
+                        <div class="input-group clockpicker">
+                            <input type="text" class="form-control" name="startTime">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-time"></span>
+                            </span>
+                        </div>
+                        <label for="end_time">turn off time</label>
+
+                        <div class="input-group clockpicker">
+                            <input type="text" class="form-control" name="endTime">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-time"></span>
+                            </span>
+                        </div>
+
+                    </div>
+                    <button type="submit" name: "submit" class="btn btn-default">submit</button>
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $('.daterange').datepicker({
+                format: "dd/mm/yyyy",
+                startDate: 0
+            });
+            $('.clockpicker').clockpicker({
+                'default': 'now'
+            });
+        </script>
+</body>
+
+</html>
