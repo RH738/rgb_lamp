@@ -13,7 +13,6 @@
     <script type="text/javascript" src="/moment/locale/en-gb.js"></script>
     <script type="text/javascript" src="/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 
-
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Audiowide|Basic|Luckiest+Guy" rel="stylesheet">
@@ -27,43 +26,8 @@
 </head>
 
 <body>
-    <div class="container">
-        <ul class="nav nav-tabs nav-justified">
-            <li role="presentation"><a href="#">general settings</a></li>
-            <li role="presentation" class="active"><a href="#">schedule</a></li>
-        </ul>
-        <div class="caption">
-            <h1>add a schedule for your lamp</h1>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <form action="/sendDate" method="post">
-                    <div class="form-group">
-                        <label for="color_pick">pick your color</label>
-                        <input class="form-control" type="color" value="#FF0000" name="color" id="colorPicker">
-                        <label for="startDate">when should the lamp turn on?</label>
-                        <div class='input-group date' id='startDatePicker'>
-                            <input type='text' class="form-control" name="startDateTime" />
-                            <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                            </span>
-                        </div>
-                        <label for="endDate">when should the lamp turn off?</label>
-                        <div class='input-group date' id='endDatePicker'>
-                            <input type='text' class="form-control" name="endDateTime" />
-                            <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                            </span>
-                        </div>
-                    </div>
-                    <button type="submit" name: "submit" class="btn btn-default">submit</button>
-                </form>
-            </div>
-            <div class="col-md-6">
-                <schedule-list></schedule-list>
-            </div>
-        </div>
-        <script type="text/javascript" src="schedule-list/controls.js"></script>
+        <schedule-list></schedule-list>
+
         <!-- my angular scripts -->
         <script type="text/javascript" src="schedule-list/schedule-list.module.js"></script>
         <script type="text/javascript" src="schedule-list/schedule-list.component.js"></script>
