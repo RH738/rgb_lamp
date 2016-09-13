@@ -1,0 +1,23 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>color</th>
+            <th>start date</th>
+            <th>start time</th>
+            <th>end date</th>
+            <th>end time</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="entry in $ctrl.entries">
+            <td>{{$index}}</td>
+            <td bgcolor = {{entry.color}}>
+                {{entry.color}}</td>
+            <td>{{entry.startDate}}</td>
+            <td>{{entry.startTime}}</td>
+            <td>{{entry.endDate}}</td>
+            <td>{{entry.endTime}}</td>
+        </tr>
+    </tbody>
+</table>

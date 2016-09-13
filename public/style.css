@@ -1,7 +1,11 @@
 .caption {
-    padding-bottom:  4rem;
+    padding-bottom:  2rem;
     font-family: 'Luckiest Guy', cursive;
     font-size: 5rem
+}
+
+.nav{
+    font-family: 'Luckiest Guy', cursive;
 }
 
 body {
@@ -11,7 +15,11 @@ body {
     font-family: 'Audiowide', cursive;*/
     font-family: 'Basic', sans-serif;
 }
-
 .container {
+    border: 1px;
+    border-style: solid;
+    border-color: lightgrey;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     /*width: 70%*/
 }
