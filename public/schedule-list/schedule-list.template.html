@@ -8,7 +8,7 @@
     </div>
     <div class="row">
         <div class="col-md-6">
-            <form action="/sendDate" method="post">
+            <form action="/sendDate" method="post" id="formSchedule">
                 <div class="form-group">
                     <label for="color_pick">pick your color</label>
                     <input class="form-control" type="color" value="#FF0000" name="color" id="colorPicker">
@@ -75,6 +75,15 @@
             $('#endDatePicker').on("dp.change", function(e) {
                 $('#startDatePicker').data("DateTimePicker").maxDate(e.date);
             });
+
+            $('#formSchedule').submit(function(event){
+                var postObject = {}
+                $('#formSchedule input').each(function(index, element){
+                    postObject[element.name] = element.value;
+                })
+                $.post("/sendDate", postObject);
+                event.preventDefault();
+            })
 
             function random(min, max) {
                 return Math.floor(Math.random() * (max - min) + 1) + min;

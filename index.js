@@ -38,14 +38,14 @@ app.post('/sendDate', function(req, res) {
         console.log(date);
     });
 
-    res.sendFile(__dirname + "/" + "index.html");
+    // res.sendFile(__dirname + "/" + "index.html");
 });
 
 app.get('/', function(req, res) {
     res.sendFile(__dirname + "/" + "index.html");
 });
 
-app.get('/:Entries', function(req, res) {
+app.get('/Entries', function(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.send(JSON.stringify(scheduleList));
 })
